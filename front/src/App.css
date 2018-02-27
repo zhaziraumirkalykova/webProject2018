@@ -1,0 +1,53 @@
+.desc{
+  text-align: center;
+
+}
+.bg{
+	background-image: url('./images/bg.jpeg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+  height: 1000px;
+}
+.button{
+  width:100%;
+}
+.book{
+  height: auto;
+  width: 100%;
+}
+.logout{
+  margin-left: 765px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.header{
+  width: 100%;
+  text-align: center;
+  margin-top: 20%;
+  margin-bottom: 50px; 
+}
+.form{
+	padding-bottom: 30px;
+	margin-left: 30%;
+  width: 500px;
+}
+.form-control{
+}
+.studentteacher{
+  margin-top: 10%;
+}
+.btnStudent{
+  margin-right: 50px;
+  margin-left: 40%;
+}
+.container{
+  background-color: #cffff2;
+  padding-bottom: 10%;
+
+}
+.img{
+  width: 100%;
+}
