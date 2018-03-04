@@ -1,0 +1,109 @@
+.desc{
+  text-align: center;
+
+}
+.bg{
+	background-image: url('./images/bg.jpeg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.button{
+  width:100%;
+}
+.book{
+  height: auto;
+  width: 100%;
+}
+.logout{
+  margin-left: 765px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.header{
+  width: 100%;
+  text-align: center;
+  margin-top: 20%;
+  margin-bottom: 50px; 
+}
+.form{
+	padding-bottom: 30px;
+	width: 500px;
+}
+.form-control{
+}
+.studentteacher{
+  margin-top: 15%;
+  position: absolute;
+  left: 30%;
+}
+.btnStudent{
+  width: 300px;
+}
+.container{
+  background-color: #cffff2;
+  }
+.img{
+  width: 100%;
+  height: 350px;
+
+}
+.imgExpand{
+  width: 30%;
+}
+
+.filebtn{
+  margin-bottom: 5px;
+}
+.textarea{
+  width: 400px;
+  height: 100px;
+}
+.mainBtn{
+  width:100%;
+  height: 400px;
+}
+.bgimg{
+  width: 100%;
+  height: 550px;
+}
+.welcome{
+  text-align: center;
+}
+.textAbout{
+  padding:10px;
+}
+.footer{
+  background-color: #e8f7f2;
+  height: 300px;
+  width: 100%;
+  margin-top: 10px;
+}
+.contactUs{
+  padding-top: 20px;
+  text-align: center;
+}
+.iconBtn{
+  width: 70px;
+  padding-right: 10px;
+}
+.icons{
+  text-align: center;
+  padding-bottom: 20px;
+}
+.clearfix{
+  height: 550px;
+}
+.btn{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.border{
+  margin-top: 10px;
+}
+.info{
+  padding:10px;
+}
