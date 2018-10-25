@@ -25,7 +25,6 @@ class Course extends Component {
 
     handleEditingDone (event) {
         this.setState({ editing: false });
-    
     }
 
     handleSubmit(event){
@@ -46,19 +45,16 @@ class Course extends Component {
     handleAdd(e){
         e.preventDefault();
         let comment = this.props.comments;
-        //let photo = this.fileInput.files[0]
         comment.push({ comment: this.state.comment });
-          
-        // let n = this.state.id;
-        // n.toString();
+
         this.setState({
           comments: comment,
-          comment: '',
-          //id: n + 1
+          comment: ''
         });
     }
+
     render () {
-        var text = this.props.text;
+        const {text} = this.props;
 
         if (this.state.getInfo) {
             return(
@@ -83,17 +79,18 @@ class Course extends Component {
                 </div>
             )
         }
+
         return(
             <div className = "border border-success">
                 <div  className = "filebtn">
-                    
                 <button className = "mainBtn" onClick = {this.handleSubmit.bind(this)}>
                     <img className="img" src = {this.props.image}/> 
                     {this.state.changedText}
                 </button>
                 </div>
             </div>
-            )
+        )
 	}
 }
+
 export default Course;
