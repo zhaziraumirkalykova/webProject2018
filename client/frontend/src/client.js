@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8000/api';
+import {BASE_URL} from './api';
 
 module.exports = {
    
@@ -61,7 +61,6 @@ module.exports = {
   },
 
   createMaterial(id, data, success){
-    console.log(data);
     fetch(`${BASE_URL}/courses/${id}/materials/`, {
       'method': 'POST',
       'body': JSON.stringify(data) 
@@ -88,22 +87,6 @@ module.exports = {
       .then(success)
   },
 
-  // getComments(id, success){
-  //   fetch(`${BASE_URL}/courses/${id}/comments/`, {
-  //     'method' : 'GET'
-  //   })
-  //     .then(response => response.json())
-  //     .then(success)
-  // },
-
-  // getComments(course_id, success){
-  //   fetch(`${BASE_URL}/courses/${course_id}/comments/`, {
-  //     'method' : 'GET'
-  //   })
-  //     .then(response => response.json())
-  //     .then(success)
-  // },
-
   getComments(success){
     fetch(`${BASE_URL}/comments/`, {
       'method' : 'GET'
@@ -120,7 +103,6 @@ module.exports = {
       .then(response => response.json())
       .then(success)
   },
-
 
   deleteComment(id, success){
     fetch(`${BASE_URL}/comments/${id}/`, {
@@ -139,3 +121,4 @@ module.exports = {
       .then(success)
   }
 }
+

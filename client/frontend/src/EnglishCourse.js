@@ -19,9 +19,7 @@ class App extends Component {
     this.inputChanged = this.inputChanged.bind(this);
     this.buttonClicked = this.buttonClicked.bind(this); 
     this.handleCreateMaterial = this.handleCreateMaterial.bind(this);
-  //  this.handleClickedTitle = this.handleClickedTitle.bind(this);
     this.handleDeleteMaterial = this.handleDeleteMaterial.bind(this);
-
   }
 
   componentDidMount(){
@@ -42,42 +40,6 @@ class App extends Component {
         comments: comments
       })
     })
-    // client.getCourses((courses) => {
-    //   // courses.map((course) => {
-    //   //   // console.log(course)
-    //   // })
-
-    //   let temp = this.state.comments_list;
-    //   courses.map((course) => {
-    //     temp.push(courses.comments)
-    //   });
-
-    //   courses.map((course) => {
-    //       temp.push({
-    //         id: course.id, 
-    //         comments_list: course.title, 
-    //         //visibility: false, 
-    //         comments: [] });
-    //   })
-    
-    //   this.setState({
-    //     comments_list: temp,
-    //     items: courses
-    //   });
-    //   //console.log(this.state.comments_list)
-  
-    //   courses.map((course) => {
-    //     client.getComments(course.id, (data) => {
-    //       let temp2 = this.state.comments_list;
-    //       temp2[course.id-1].comments = data
-          
-    //       this.setState({comments_list: temp2});
-    //     })
-    //   })
-    // });
-    // client.getComments((comments) =>{
-    //   console.log("helo");
-    // })
   }
 
   inputChanged(event) {
@@ -116,7 +78,6 @@ class App extends Component {
   }
 
   handleDeleteMaterial(id){
-    console.log("hello")
     this.setState({
       details: this.state.details.filter((detail) => detail.id !== id)
     });
@@ -137,8 +98,6 @@ class App extends Component {
       selectedDetail: [...this.state.selectedDetail, data],
       newMaterial: ''
     });
-
-     console.log(this.state.curCourseId);
     
     client.createMaterial(this.state.curCourseId, data, (materials) => {
       if (materials)
@@ -173,10 +132,7 @@ class App extends Component {
   }
 
   handleClickedTitle(id){
-    console.log(id);
-    console.log(this.state.details);
     let output = this.state.details.filter((item) => item.course === id);
-    console.log(output);
       this.setState({
         selectedDetail: output,
         curCourseId: id,
@@ -227,7 +183,7 @@ class App extends Component {
           </ul>
         </div>
         {
-          this.state.comments.map((comment, index) => 
+          this.state.comments.map((comment, index) => (
             <div key = {index}>
               <ul >
                 <li> 
@@ -235,7 +191,7 @@ class App extends Component {
                 </li>
               </ul>
             </div>
-          )
+          ))
         }
         </div>
       </div>
